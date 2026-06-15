@@ -1,0 +1,24 @@
+﻿name: Validate product JSON
+
+on:
+  push:
+    paths:
+      - 'wallet-ticket-schema.json'
+      - 'validate_wallet_schema.py'
+  pull_request:
+    paths:
+      - 'wallet-ticket-schema.json'
+      - 'validate_wallet_schema.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run validator
+        run: |
+          python validate_wallet_schema.py wallet-ticket-schema.json

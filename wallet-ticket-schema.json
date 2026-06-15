@@ -1,0 +1,7 @@
+﻿{
+  ""wallet"": { ""currency"": ""ARS"", ""credit_value_ars"": 10 },
+  ""pricing"": { ""packages"": [], ""services_catalog"": [] },
+  ""ticket"": {},
+  ""marketing"": {},
+  ""analytics"": {}
+}
